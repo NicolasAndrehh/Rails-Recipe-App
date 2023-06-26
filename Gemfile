@@ -44,7 +44,7 @@ gem 'bootsnap', require: false
 
 gem 'devise'
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'cancancan'
