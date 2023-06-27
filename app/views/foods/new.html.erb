@@ -1,0 +1,8 @@
+<%= stylesheet_link_tag 'food_new' %>
+<section class="food-section">
+    <h1>New Food</h1>
+
+    <%= render 'form', food: @food %>
+
+    <%= link_to 'Back', foods_path %>
+</section>
