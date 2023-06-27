@@ -1,1 +1,23 @@
-<h1>Food Home</h1>
+<%= stylesheet_link_tag 'food_index' %>
+<section class="food-section">
+    <h1>Food</h1>
+
+    <table>
+        <tr>
+            <td>Food</td>
+            <td>Measurement Unit</td>
+            <td>Unit Price</td>
+            <td>Actions</td>
+        </tr>
+        <% @foods.each do |food| %> 
+            <tr>
+                <td><%= food.name %></td>
+                <td><%= food.measurement_unit %></td>
+                <td><%= food.price %></td>
+                <td><%= button_to 'Delete', food_path(food), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+        <% end %>
+    </table>
+
+    <%= link_to 'New Food', new_food_path %>
+</section>
