@@ -1,58 +1,58 @@
 .form-title {
-    text-align: center;
-    color: #000;
-    font-size: 2.5rem;
+  text-align: center;
+  color: #000;
+  font-size: 2.5rem;
 }
 
 .food-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  width: 30rem;
+  margin: 0 auto;
+
+  .form-group {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    width: 30rem;
-    margin: 0 auto;
+    align-items: flex-start;
+    gap: 0.25rem;
+    width: 100%;
 
-    .form-group {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.25rem;
-        width: 100%;
-
-        label {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #000;
-        }
-
-        .input {
-            width: 100%;
-            padding: 0.5rem;
-            border-radius: 0.25rem;
-            border: 1px solid #929292;
-            box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.507);
-            outline: none;
-        }
+    label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #000;
     }
 
-    input[type='submit'] {
-        padding: 1rem;
-        border-radius: 0.25rem;
-        width: 100%;
-        text-align: center;
-        font-size: 1rem;
-        background-color: #fff;
-        border: 1px solid #000;
-        color: #000;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-
-        &:hover {
-            background: #000;
-            color: #fff;
-        }
+    .input {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      border: 1px solid #929292;
+      box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.507);
+      outline: none;
     }
+  }
+
+  input[type='submit'] {
+    padding: 1rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: #000;
+      color: #fff;
+    }
+  }
 }
