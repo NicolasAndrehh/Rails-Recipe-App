@@ -1,0 +1,34 @@
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  margin: 16px;
+  gap: 32px;
+  align-items: center;
+}
+
+.recipe-sect-one {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.recipe-sect-one-div {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  border: 4px solid black;
+}
+
+.recipe-sect-one-div-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  gap: 16px;
+}
+
+.recipe-sect-one-desc {
+  padding: 16px;
+}
