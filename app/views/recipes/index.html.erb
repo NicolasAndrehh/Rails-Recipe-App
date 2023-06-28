@@ -5,7 +5,7 @@
             <% @recipes.each do |recipe| %>
             <div class="recipe-sect-one-div">
                 <header class="recipe-sect-one-div-header">
-                <h4>Recipe<h4>
+                <h6><%= link_to recipe.name, recipe_path(recipe), class: "td_none" %></h6>
                     <button class="delet-btn">
                      <%= link_to "Delete", recipe_path(recipe), class: "td_none", data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete Recipe?" } %> 
                      </button>
