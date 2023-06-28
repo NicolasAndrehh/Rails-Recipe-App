@@ -1,0 +1,27 @@
+<%= stylesheet_link_tag 'recipemain' %>
+<main>
+
+        <section class="recipe-sect-one">
+            <% @recipes.each do |recipe| %>
+            <div class="recipe-sect-one-div">
+                <header class="recipe-sect-one-div-header">
+                <h6><%= link_to recipe.name, recipe_path(recipe), class: "td_none" %></h6>
+                    <button class="delet-btn">
+                     <%= link_to "Delete", recipe_path(recipe), class: "td_none", data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete Recipe?" } %> 
+                     </button>
+                </header>
+
+                <div class="recipe-sect-one-desc">
+                    
+                    <p><%= recipe.description %></p>  
+                </div>
+            </div>
+            <% end %>
+
+        </section>
+
+        <section class="recipe-sect-two">
+        <button class="addnew-btn"><%= link_to "New Recipe", new_recipe_path, class: "custom_font2 td_none" %> </button>
+        </section>
+        
+    </main>
