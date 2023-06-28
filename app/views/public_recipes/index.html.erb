@@ -1,2 +1,30 @@
-<h1>PublicRecipes#index</h1>
-<p>Find me in app/views/public_recipes/index.html.erb</p>
+<main>
+
+<section class="public_section1">
+    <header>
+        <h2>Public Recipes</h2>
+    </header>
+</section>
+
+<section class="public_section2">
+    <% @recipes.each do |recipe| %>
+    <article class="public_section2_article">
+        <header class="public_section2_article_header">
+            <h2><%= link_to recipe.name, recipe, class: "td_none" %></a></h2> 
+            <p>By: <%= recipe.user.name %></p> 
+             
+        </header>
+
+        <div class="public_section2_article_div">
+             <h3>Total food Items: <%= @ingredients.where(recipe: recipe).count %></h3>
+            
+            <p>Total price: $<%= @ingredients.where(recipe: recipe).map {|value| value.food.price * value.quantity}.sum %></p>
+
+        </div>
+    </article>
+    <% end %>
+</section>
+
+</main>
+
+
