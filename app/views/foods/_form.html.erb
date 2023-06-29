@@ -1,6 +1,6 @@
-<%= stylesheet_link_tag 'food_form' %>
+<%= stylesheet_link_tag '_form' %>
 
-<%= form_with model: @food, url: foods_path, class: 'food-form' do |form| %>
+<%= form_with model: @food, url: foods_path, class: 'form' do |form| %>
     <div class="form-group">    
         <%= form.label :name %>
         <%= form.text_field :name, class: 'input'%>

@@ -1,11 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe 'Recipes', type: :request do
+  include Devise::Test::IntegrationHelpers
+
   describe 'GET /index' do
     it 'returns http success' do
-      allow_any_instance_of(ApplicationController).to receive(:authorize!).and_return(true)
+      @user = User.create(name: 'John', email: 'john@gmail.com', password: '123456', password_confirmation: '123456')
 
-      get '/recipes/index'
+      login_as(@user, scope: :user)
+
+      get '/recipes'
       expect(response).to have_http_status(:success)
     end
   end
