@@ -1,27 +1,26 @@
-<%= stylesheet_link_tag 'recipemain' %>
 <main>
         <h1 class="custom_font">Recipes</h1>
         <section class="recipe-sect-one">
             <% @recipes.each do |recipe| %>
-            <div class="recipe-sect-one-div">
-                <header class="recipe-sect-one-div-header">
-                <h6><%= link_to recipe.name, recipe_path(recipe), class: "td_none" %></h6>
-                    <button class="delet-btn">
-                     <%= link_to "Delete", recipe_path(recipe), class: "td_none", data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete Recipe?" } %> 
+            <article class="recipe_section1_article">
+                <header class="recipe_section1_article_header">
+                    <h2><%= link_to recipe.name, recipe_path(recipe), class: "td_none" %></h2>
+                    <button class="custom_btn1">
+                     <%= link_to "Remove", recipe_path(recipe), class: "td_none custom_color1", data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete Recipe?" } %> 
                      </button>
                 </header>
 
-                <div class="recipe-sect-one-desc">
-                    
+                <div class="recipe_section1_article_div">
+                    <h3>Description of the recipe</h3>
                     <p><%= recipe.description %></p>  
                 </div>
-            </div>
+            </article>
             <% end %>
 
         </section>
 
-        <section class="recipe-sect-two">
-        <button class="addnew-btn"><%= link_to "New Recipe", new_recipe_path, class: "custom_font2 td_none" %> </button>
+        <section class="custom_text_align1 custom_margin1">
+        <button class="custom_btn1"><%= link_to "Add New Recipe", new_recipe_path, class: "custom_font2 td_none custom_color1" %> </button>
         </section>
         
     </main>

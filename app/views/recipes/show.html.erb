@@ -39,9 +39,9 @@
     </section>
 
     <section class="recipe_detail_section2">
-            <button class="custom_btn1"><%= link_to 'Generate Shopping List', shopping_list_path, class:"td_none" %></button>
+            <button class="custom_btn1"><%= link_to 'Generate Shopping List', shopping_lists_path, class:"td_none custom_color1" %></button>
             <button class="custom_btn1">
-            <%=link_to "Add ingredient", new_recipe_recipe_food_path(@recipe), class:"td_none"%>
+            <%=link_to "Add ingredient", new_recipe_recipe_food_path(@recipe), class:"td_none custom_color1"%>
             </button>
         </section>
 
@@ -66,8 +66,8 @@
                         <th class="custom_font1"><%= recipeFood.quantity %><%= recipeFood.food.measurement_unit  %></th>
                         <th class="custom_font1">$<%= recipeFood.quantity.to_i * recipeFood.food.price %></th>
                         <th class="custom_font1 table_flex1">
-                        <button class="custom_btn1"><%=link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id:recipeFood.id), class:"td_none"%></button>
-                        <%=button_to "Delete", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipeFood.id), method: :delete, class:"custom_btn1"%>
+                        <button class="custom_btn1"><%=link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id:recipeFood.id), class:"td_none custom_color1"%></button>
+                        <%=button_to "Delete", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipeFood.id), method: :delete, class:"custom_btn1 custom_color1"%>
                         </th>
                     </tr>
                 <% end %> 
