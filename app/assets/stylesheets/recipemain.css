@@ -76,10 +76,11 @@ thead {
   background-color: #000;
   border: 1px solid #000;
 
-  td {
-    font-weight: 700;
-    color: #fff;
-  }
+}
+
+thead td {
+  font-weight: 700;
+  color: #fff;
 }
 
 .td-desc {

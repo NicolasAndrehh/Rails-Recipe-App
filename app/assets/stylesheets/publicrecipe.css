@@ -6,3 +6,8 @@
   text-decoration: none;
   color: #000;
 }
+
+thead td {
+  font-weight: 700;
+  color: #fff;
+}
