@@ -29,11 +29,12 @@ h1 {
   background-color: #000;
   border: 1px solid #000;
   transition: all 0.3s ease-in-out;
+}
 
-  &:hover {
-    background-color: #fff;
-    color: #000;
-  }
+button a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .td-name a {
@@ -50,6 +51,10 @@ h1 {
 .delete-btn button a {
   text-decoration: none;
   color: #fff;
+}
+
+button a:hover {
+  color: #000;
 }
 
 .recipe-add-btn a:hover {
@@ -78,7 +83,6 @@ tr:nth-child(even) {
 thead {
   background-color: #000;
   border: 1px solid #000;
-
 }
 
 thead td,
@@ -91,8 +95,8 @@ thead tr th {
   color: #000;
 }
 
-.delete-btn button,
-button {
+button,
+.delete-btn button {
   padding: 0.5rem 1.5rem;
   border-radius: 0.25rem;
   background-color: #000;
@@ -102,24 +106,9 @@ button {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-
-  &:hover {
-    background-color: #fff;
-    color: #000;
-  }
-}
-
-button a {
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
 }
 
 .delete-btn button a:hover {
-  color: #000;
-}
-
-button a:hover {
   color: #000;
 }
 
