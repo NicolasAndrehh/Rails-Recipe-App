@@ -32,10 +32,20 @@ h1 {
   }
 }
 
+.td-name a {
+  text-decoration: none;
+  color: #000;
+}
+
 .recipe-add-btn a {
   color: #fff;
   font-weight: 700;
   text-decoration: none;
+}
+
+.delete-btn button a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .recipe-add-btn a:hover {
@@ -76,11 +86,6 @@ thead {
   color: #000;
 }
 
-.td-name a {
-  text-decoration: none;
-  color: #000;
-}
-
 .delete-btn button {
   padding: 0.5rem 1.5rem;
   border-radius: 0.25rem;
@@ -96,11 +101,6 @@ thead {
     background-color: #fff;
     color: #000;
   }
-}
-
-.delete-btn button a {
-  text-decoration: none;
-  color: #fff;
 }
 
 .delete-btn button a:hover {
