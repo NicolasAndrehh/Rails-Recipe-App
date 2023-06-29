@@ -1,34 +1,100 @@
 main {
   display: flex;
   flex-direction: column;
-  padding: 16px;
-  margin: 16px;
-  gap: 32px;
   align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 2rem;
 }
 
 .recipe-sect-one {
+  width: 40rem;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: end;
 }
 
-.recipe-sect-one-div {
-  display: flex;
-  gap: 32px;
-  align-items: center;
-  border: 4px solid black;
+.recipe-add-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: #000;
+  border: 1px solid #000;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
 }
 
-.recipe-sect-one-div-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  margin: 10px;
-  gap: 16px;
+.recipe-add-btn a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
 }
 
-.recipe-sect-one-desc {
-  padding: 16px;
+table {
+  width: 40rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+  margin-top: 2rem;
+}
+
+th,
+td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+thead {
+  background-color: #000;
+  border: 1px solid #000;
+
+  td {
+    font-weight: 700;
+    color: #fff;
+  }
+}
+
+.td-desc {
+  color: #000;
+}
+
+.td-name a {
+  text-decoration: none;
+  color: #000;
+}
+
+.delete-btn button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.delete-btn button a {
+  text-decoration: none;
+  color: #fff;
 }
