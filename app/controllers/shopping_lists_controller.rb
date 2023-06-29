@@ -9,9 +9,9 @@ class ShoppingListsController < ApplicationController
   
       recipe_foods.keys.each do |food_id|
         food = Food.find(food_id)
-        needed_food = food.quantity - recipe_foods[food_id]
-        next unless needed_food.negative?
-  
+        if food.quantity.present? && recipe_foods[food_id].present?
+          needed_food = food.quantity - recipe_foods[food_id]
+          next unless needed_food.negative?  
         name = food.name
         needed = needed_food.abs
         price = needed * food.price
@@ -24,3 +24,4 @@ class ShoppingListsController < ApplicationController
       end
     end
   end
+end
