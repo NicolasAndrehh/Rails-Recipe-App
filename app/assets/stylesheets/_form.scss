@@ -4,7 +4,19 @@
   font-size: 2.5rem;
 }
 
-.food-form {
+.back-link {
+  color: #000;
+  font-size: 1.25rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    color: #8490ff;
+  }
+}
+
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,16 +55,16 @@
     width: 100%;
     text-align: center;
     font-size: 1rem;
-    background-color: #fff;
+    background-color: #000;
     border: 1px solid #000;
-    color: #000;
+    color: #fff;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      background: #000;
-      color: #fff;
+      background: #fff;
+      color: #000;
     }
   }
 }

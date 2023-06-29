@@ -1,10 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe 'Recipe integration tests', type: :feature do
+  include Devise::Test::IntegrationHelpers
+
   before(:each) do
     @user = User.create(name: 'John', email: 'john@gmail.com', password: '123456', password_confirmation: '123456')
     @recipe = Recipe.create(name: 'Apple Pie', preparation_time: '10 minutes', cooking_time: '20 minutes', description: 'This is a description', public: true, user_id: @user.id)
+
     allow_any_instance_of(ApplicationController).to receive(:authorize!).and_return(true)
+    login_as(@user, scope: :user)
   end
 
   describe 'index page' do
@@ -24,7 +28,7 @@ RSpec.describe 'Recipe integration tests', type: :feature do
     end
 
     it 'should display a link to delete each recipe' do
-      expect(page).to have_link('Delete', href: recipe_path(@recipe))
+      expect(page).to have_link('Remove', href: recipe_path(@recipe))
     end
   end
 
@@ -52,7 +56,7 @@ RSpec.describe 'Recipe integration tests', type: :feature do
     end
 
     it 'should display a link to generate shopping list' do
-      expect(page).to have_link('Generate Shopping List', href: shopping_list_path(@recipe))
+      expect(page).to have_link('Generate Shopping List', href: shopping_lists_path)
     end
 
     it 'should display a link to add a new ingredient' do

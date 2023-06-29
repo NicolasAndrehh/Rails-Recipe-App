@@ -1,9 +1,9 @@
-<h1>New recipe</h1>
+<%= stylesheet_link_tag 'recipemain' %>
 
-<%= render "form", recipe: @recipe %>
+<section class='new-recipe-section'>
+  <%= link_to "Back to recipes", recipes_path, class: 'back-link'%>
 
-<br>
+  <h1 class='form-title'>New recipe</h1>
 
-<div>
-  <%= link_to "Back to recipes", recipes_path %>
-</div>
+  <%= render "form", recipe: @recipe %>
+</section>
