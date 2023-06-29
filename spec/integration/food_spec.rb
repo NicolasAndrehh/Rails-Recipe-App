@@ -10,7 +10,7 @@ RSpec.describe 'Food integration tests', type: :feature do
     @third_food = Food.create(name: 'Orange', user_id: @user.id, measurement_unit: 'grams', price: 30, quantity: 1)
     @foods = [@first_food, @second_food, @third_food]
 
-    login_as(@user, scope: :user) 
+    login_as(@user, scope: :user)
   end
 
   describe 'index page' do
