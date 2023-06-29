@@ -38,6 +38,10 @@ h1 {
   text-decoration: none;
 }
 
+.recipe-add-btn a:hover {
+  color: #000;
+}
+
 table {
   width: 40rem;
   border-collapse: collapse;
@@ -97,4 +101,8 @@ thead {
 .delete-btn button a {
   text-decoration: none;
   color: #fff;
+}
+
+.delete-btn button a:hover {
+  color: #000;
 }
