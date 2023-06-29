@@ -9,20 +9,18 @@ class ShoppingListsController < ApplicationController
 
     recipe_foods.keys.each do |food_id|
       food = Food.find(food_id)
-      if food.quantity.present? && recipe_foods[food_id].present?
-        needed_food = food.quantity - recipe_foods[food_id]
-        next unless needed_food.negative?
+      needed_food = food.quantity - recipe_foods[food_id]
+      next unless needed_food.negative?
 
-        name = food.name
-        needed = needed_food.abs
-        price = needed * food.price
-        @shopping_lists << { name:, quantity: needed, price: }
-      end
+      name = food.name
+      needed = needed_food.abs
+      price = needed * food.price
+      @shopping_lists << { name:, quantity: needed, price: }
+    end
 
-      @total_price = 0
-      @shopping_lists.each do |_shopping_list_item_id|
-        @total_price += food_id[:price]
-      end
+    @total_price = 0
+    @shopping_lists.each do |food_id|
+      @total_price += food_id[:price]
     end
   end
 end
