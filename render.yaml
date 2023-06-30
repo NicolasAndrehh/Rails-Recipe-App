@@ -2,7 +2,6 @@ databases:
   - name: production
     databaseName: recipe_app_production
     user: <%= ENV["RENDER_DATABASE_USERNAME"] %>
-    password: <%= ENV["RENDER_DATABASE_PASSWORD"] %>
 
 services:
   - type: web
