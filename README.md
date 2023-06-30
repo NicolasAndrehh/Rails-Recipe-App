@@ -20,6 +20,7 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
+- [🚀 Live Demo](#live-demo)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -113,6 +114,10 @@ To run tests, run the following command:
   rails db:migrate RAILS_ENV=test
   rspec
 ```
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+[Live Demo](https://recipe-app-nz9l.onrender.com)
 
 ## 👥 Authors <a name="authors"></a>
 
